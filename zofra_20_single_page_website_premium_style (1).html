@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZOFRA20 – Futuristic Premium Creative Studio</title>
+  <meta name="description" content="ZOFRA20 – Graphic Design, Video Editing, Animation & Whiteboard Explainers, Digital Drawing & Art, Game Asset Design.">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at 20% 20%, #0f0f0f, #050505);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #050505, #0a0a0a, #050505);
+      border-bottom: 1px solid #0ff;
+      box-shadow: 0 0 25px rgba(0,255,255,0.4), inset 0 0 10px rgba(0,255,255,0.3);
+    }
+    header h1 {
+      font-weight: 800;
+      color: cyan;
+      letter-spacing: 3px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px rgba(0,255,255,0.9), 0 0 30px rgba(0,255,255,0.6);
+    }
+    header a {
+      text-decoration: none;
+      color: #000;
+      background: cyan;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      box-shadow: 0 0 20px rgba(0,255,255,0.9);
+      transition: all 0.3s ease;
+    }
+    header a:hover {
+      background: #00f5f5;
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(0,255,255,1), 0 0 50px rgba(0,255,255,0.7);
+    }
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: cyan;
+      text-align: center;
+      text-shadow: 0 0 20px rgba(0,255,255,0.9), 0 0 40px rgba(0,255,255,0.5);
+    }
+    .service-card {
+      background: linear-gradient(145deg, rgba(0,255,255,0.15), rgba(0,0,0,0.85));
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid rgba(0,255,255,0.4);
+      box-shadow: 0 0 25px rgba(0,255,255,0.15), inset 0 0 15px rgba(0,255,255,0.1);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent, rgba(0,255,255,0.2), transparent);
+      transform: rotate(45deg);
+      animation: shine 5s infinite;
+    }
+    @keyframes shine {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) rotate(45deg); }
+    }
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      border-color: cyan;
+      box-shadow: 0 0 40px rgba(0,255,255,0.6), inset 0 0 20px rgba(0,255,255,0.3);
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,255,255,0.7);
+    }
+    .service-card p {
+      font-size: 1rem;
+      color: #bbb;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #0ff;
+      color: #888;
+      font-size: 0.9rem;
+      background: linear-gradient(90deg, #050505, #0a0a0a);
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+      margin-top: 50px;
+    }
+    @media (max-width: 500px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header a {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ZOFRA20</h1>
+    <a href="mailto:abdlumohid647@gmail.com">Contact</a>
+  </header>
+  <main>
+    <section>
+      <h2>Our Premium Futuristic Services</h2>
+      <div class="grid">
+        <div class="service-card" onclick="openGmail('Graphic Design Inquiry')">
+          <h3>Graphic Design</h3>
+          <p>Charges: PKR 500–3000</p>
+        </div>
+        <div class="service-card" onclick="openGmail('Video Editing Inquiry')">
+          <h3>Video Editing</h3>
+          <p>Charges: PKR 500–4000</p>
+        </div>
+        <div class="service-card" onclick="openGmail('Animation & Whiteboard Explainers Inquiry')">
+          <h3>Animation & Whiteboard Explainers</h3>
+          <p>Charges: PKR 2000–9000</p>
+        </div>
+        <div class="service-card" onclick="openGmail('Digital Drawing & Art Inquiry')">
+          <h3>Digital Drawing & Art</h3>
+          <p>Charges: PKR 1000–6000</p>
+        </div>
+        <div class="service-card" onclick="openGmail('Game Asset Design Inquiry')">
+          <h3>Game Asset Design</h3>
+          <p>Charges: PKR 500–2000</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> ZOFRA20 • Contact: abdlumohid647@gmail.com</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function openGmail(subject) {
+      window.location.href = `mailto:abdlumohid647@gmail.com?subject=${encodeURIComponent(subject)}`;
+    }
+  </script>
+</body>
+</html>
